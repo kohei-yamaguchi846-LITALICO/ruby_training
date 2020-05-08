@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Person
   attr_reader :strength
   attr_reader :cleverness
@@ -21,9 +23,7 @@ class Fighter < Person
     @strength * 1.5
   end
 
-  def cleverness
-    @cleverness
-  end
+  attr_reader :cleverness
 end
 
 class Wizard < Person
@@ -35,7 +35,6 @@ class Wizard < Person
     @cleverness * 3.0
   end
 end
-
 
 f = Fighter.new(10, 10)
 puts f.strength      # => 15.0

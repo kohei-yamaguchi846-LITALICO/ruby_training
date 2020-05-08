@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative './5.rb'
 
 f = Fighter.new(20, 9.5)

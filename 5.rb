@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Person
   attr_reader :strength
   attr_reader :cleverness
@@ -24,7 +26,7 @@ class Person
   end
 
   def fight(enemy)
-    self.power_against(enemy) <=> enemy.power_against(self)
+    power_against(enemy) <=> enemy.power_against(self)
   end
 end
 
@@ -33,9 +35,7 @@ class Fighter < Person
     @strength * 1.5
   end
 
-  def cleverness
-    @cleverness
-  end
+  attr_reader :cleverness
 
   def power_against(enemy)
     if enemy.class == Wizard
